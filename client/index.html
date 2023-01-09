@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Abgo - Your Coding AI</title>
+    <link rel="stylesheet" href="style.css" />
+
+
+
+
+
+
+
+
+  </head>
+  <body>
+
+
+
+    <div id="app">
+      <div id="chat_container"></div>
+
+      <form>
+        <textarea name="prompt" rows="1" cols="1" placeholder="Ask Abgo -اسألني  ..."></textarea>
+        <button type="submit"><img src="assets/send.svg" alt="send" />
+      </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bx-brain'></i>
+        
+        
+        <div class="logo_name">Abgo Ai</div>
+          <i class='bx bx-menu' id="btn" ></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+            <i class='bx bx-search' ></i>
+           <input type="text" placeholder="Search...">
+           <span class="tooltip">Search</span>
+        </li>
+        <li>
+ 
+        <li>
+         <a href="L:\Open Ai\client\About-us\responsive-portfolio-website-main/index.html">
+           <i class='bx bx-user' ></i>
+           <span class="links_name">About US</span>
+         </a>
+         <span class="tooltip">About US</span>
+       </li>
+       <li>
+         
+
+
+
+
+       <li class="profile">
+           <div class="profile-details">
+             <!--<img src="profile.jpg" alt="profileImg">-->
+             <div class="name_job">
+               <div class="name">Ahmed Ashraf</div>
+               <div class="job">Web designer</div>
+             </div>
+           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           <i class='bx bx-log-out' id="log_out" ></i>
+       </li>
+      </ul>
+    </div>
+
+
+ 
+
+
+
+    <script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+  
+    closeBtn.addEventListener("click", ()=>{
+      sidebar.classList.toggle("open");
+      menuBtnChange();//calling the function(optional)
+    });
+  
+    searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+      sidebar.classList.toggle("open");
+      menuBtnChange(); //calling the function(optional)
+    });
+  
+    // following are the code to change sidebar button(optional)
+    function menuBtnChange() {
+     if(sidebar.classList.contains("open")){
+       closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+     }else {
+       closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+     }
+    }
+    </script>
+
+
+
+    
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
